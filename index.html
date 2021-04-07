@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restful API</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+    <script src="app.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="d-flex p-4 justify-content-between align-items-center">
+            <h1>Products</h1>
+            <button id="addButton" class="btn btn-success">Add</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <div id="products-grid" class="grid row"></div>
+    </div>
+
+    <div id="overlay" style="background-color: #00000030;" class="fixed-top d-none align-items-center justify-content-center w-100 h-100">
+        <div class="d-flex container flex-column bg-light rounded-lg shadow-lg px-5 py-4 m-4">
+            <form id="prodForm" class="d-flex flex-column">
+                
+                <input id="_id" type="hidden" value="">
+                <label for="name">
+                    Name
+                </label>
+                <input id="name" name="name" class="form-control" type="text">
+
+                <label for="department">
+                    Department
+                </label>
+                <input id="department" name="department" class="form-control" type="text">
+
+                <label for="color">Color</label>
+                <input id="color" name="color" class="form-control" type="text">
+
+                <label for="price">Price</label>
+                <input id="price" name="price" class="form-control" type="number">
+            
+                <label for="description">
+                    Description
+                </label> 
+                <textarea id="description" name="description" class="form-control" type="text"></textarea>
+
+                <div class="mt-4 align-self-end">
+                    <button type="reset" id="close-overlay" class="btn btn-outline-danger mr-2">Cancel</button>
+                    <button type="submit" class="btn btn-success">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
